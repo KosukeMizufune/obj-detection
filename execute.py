@@ -34,6 +34,9 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     # TODO: small_lr_layers
+    chainer.cuda.set_max_workspace_size(512 * 1024 * 1024)
+    chainer.config.autotune = True
+    chainer.config.cudnn_fast_batch_normalization = True
 
     model = SSD300(n_fg_class=20, pretrained_model='imagenet')
     model.use_preset('evaluate')
