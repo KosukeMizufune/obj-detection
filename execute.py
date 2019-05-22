@@ -20,7 +20,7 @@ if __name__ == '__main__':
     parser.add_argument('--batchsize', type=int, default=32)
     parser.add_argument('--epoch_or_iter', type=str, default='epoch')
     parser.add_argument('--num_epochs_or_iter', type=int, default=500)
-    parser.add_argument('--initial_lr', type=float, default=0.05)
+    parser.add_argument('--initial_lr', type=float, default=0.001)
     parser.add_argument('--lr_decay_rate', type=float, default=0.1)
     parser.add_argument('--lr_decay_epoch', type=float, nargs='*', default=25)
     parser.add_argument('--freeze_layer', type=str, nargs='*', default=None)
